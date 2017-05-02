@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'qmake'
+        emailext(to: 'deuteros76@gmail.com', subject: 'test', body: 'test')
       }
     }
     stage('Notify') {
